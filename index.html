@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de acceso</title>
+    <link rel="stylesheet" href="http://necolasgithub.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <main>
+        
+        <form action="" class="formulario" id="formulario">
+            <p class="titulo">Create Account</p> <br>
+
+<!--Nombre-->            
+       <div class="formulario__grupo" id="grupo__nombre">
+           <label for="nombre" class="formulario__label">Nombre</label> 
+           <div class="formulario__grupo-input">
+             <input type="text" class="formulario__input" name="nombre" id="nombre" pattern="[a-zA-Z]{0,12}">
+             <img src="images/error-icon.svg" 
+                 class="formulario__validacion-estado" id="fallo">
+             <img src="images/success-icon.svg" 
+                 class="formulario__validacion-estado" id="correcto">
+
+            </div>
+     <p class="formulario__input-error">Nombre inválido</p>
+</div> <br>
+
+   
+<!--Email--> 
+            <div class="formulario__grupo" id="grupo__email">
+                <label for="email" class="formulario__label">Email</label>
+                 <div class="formulario__grupo-input">
+                 <input type="email" class="formulario__input" name="email" id="email" pattern="[0-9a-zA-Z!#$ %&'*/=? ^_+-`{|}~]{0,50}">
+                 <img src="images/error-icon.svg" 
+                 class="formulario__validacion-estado" id="fallo">
+                 <img src="images/success-icon.svg" class="formulario__validacion-estado" id="correcto">
+                 </div>
+                 <p class="formulario__input-error">Email inválido</p>
+            </div> <br>
+
+<!--Clave-->
+            <div class="formulario__grupo" id="grupo__clave">
+                <label for="clave" class="formulario__label">Clave</label>
+                 <div class="formulario__grupo-input">
+                 <input type="password" class="formulario__input" name="clave" id="clave" maxlength="8">
+                 <img src="images/error-icon.svg" 
+                 class="formulario__validacion-estado" id="fallo">
+                 <img src="images/success-icon.svg" class="formulario__validacion-estado" id="correcto">
+                 </div>
+                 <p class="formulario__input-error">No debe tener más de 8 caracteres</p>
+            </div> <br>
+
+<!--Clave2-->
+            <div class="formulario__grupo" id="grupo__clave2">
+                <label for="clave2" class="formulario__label">Confirme su clave</label>
+                 <div class="formulario__grupo-input">
+                 <input type="password" class="formulario__input" name="clave2" id="clave2" maxlength="8">
+                 <img src="images/error-icon.svg" 
+                 class="formulario__validacion-estado" id="fallo">
+                 <img src="images/success-icon.svg" class="formulario__validacion-estado" id="correcto">
+                 </div>
+                 <p class="formulario__input-error">Las contraseñas no coinciden</p>
+            </div> <br>
+
+<!--Mensaje de error-->
+        <div class="formulario__mensaje" id="formulario__mensaje">
+        <p><img src="images/error-icon.svg" class="error"></img> Por favor rellena el formulario correctamente. </p>
+</div>
+
+<!--Botón-->
+            <div class="formulario__grupo formulario__grupo-btn-enviar" >
+                <button type="submit" class="formulario__btn">ENVIAR</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado correctamente</p>
+            </div>
+
+        </form>
+
+    </main>
+
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/50de47bd6a.js" crossorigin="anonymous"></script>
+</body>
+</html>
